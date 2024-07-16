@@ -1,0 +1,56 @@
+.hoverText {
+    transition:
+        0.35s font-weight,
+        0.35s color;
+    font-family: "cabin-sketch-regular", sans-serif;
+    font-weight: 400;
+    font-style: normal;    
+}
+
+.hoverText::selection {
+    background-color: white;
+    color: black;
+}
+
+.hoverText:hover {
+    font-weight: 900;
+    color: rgb(238, 242, 255);
+}
+
+/* To the right */
+.hoverText:hover+.hoverText {
+    font-weight: 500;
+    color: rgb(199, 210, 254);
+}
+
+.hoverText:hover+.hoverText+.hoverText {
+    font-weight: 300;
+}
+
+/* To the left */
+.hoverText:has(+ .hoverText:hover) {
+    font-weight: 500;
+    color: rgb(199, 210, 254);
+}
+
+.hoverText:has(+ .hoverText + .hoverText:hover) {
+    font-weight: 300;
+}
+
+.animateup{
+    animation: updown 1s alternate infinite;
+    transition: all 200ms linear;
+    transform: translateY(0);
+}
+
+@keyframes updown {
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+.motto{
+    /* font-size: larger; */
+    font-weight: 400;
+    font-family: "cabin-sketch-regular", sans-serif;
+}

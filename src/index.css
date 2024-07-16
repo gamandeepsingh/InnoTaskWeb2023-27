@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: maiandra;
+    src: url("./font-family/Maiandra\ GD\ Regular.ttf");
+}
+body::-webkit-scrollbar{
+    width: 20px;
+    background-color: rgb(82, 82, 82);
+   border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track{
+    width: 20px;
+    background-color: rgb(82, 82, 82);
+    
+}
+body::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 5px;
+    border: 2px solid rgb(82, 82, 82);
+    padding: 1px;
+    cursor: grab;
+}
