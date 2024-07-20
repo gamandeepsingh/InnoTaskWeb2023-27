@@ -7,11 +7,11 @@ const achievements = [
     img: classImg
   },
   {
-    title: "Achiever 1",
+    title: "Achiever 2",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea reprehenderit quae voluptates facere! Consequuntur eum incidunt velit earum odit?",
     img: classImg
   },{
-    title: "Achiever 1",
+    title: "Achiever 3",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea reprehenderit quae voluptates facere! Consequuntur eum incidunt velit earum odit?",
     img: classImg
   }
@@ -29,10 +29,10 @@ const Achievements = () => {
         }}>
           Achievers of the Month
         </h1>
-        <div className="flex items-center justify-center gap-20">
+        <div className="flex flex-col items-center justify-center gap-8 sm:flex-row sm:flex-wrap sm:gap-20">
           {
-            achievements.map(achievement => (
-              <div data-aos="flip-left" className="card-wrapper rounded-xl bg-gradient-to-br from-[#17a2b2] to-[#3700ff]">
+            achievements.map((achievement, idx) => (
+              <div key={idx} data-aos="flip-left" className="card-wrapper rounded-xl bg-gradient-to-br from-[#17a2b2] to-[#3700ff]">
                 <div className="w-[250px] h-[350px] p-2 rounded-xl flex flex-col group bg-[#1d1724] overflow-hidden hover:scale-[0.98] transition-all duration-300">
                   <div className="flex-grow h-full bg-cover bg-center rounded-lg group-hover:h-1/2 group-hover:flex-grow-0 transition-all duration-500" style={{ backgroundImage: `url(${achievement.img})` }}></div>
                   <div className="pt-1">
