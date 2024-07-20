@@ -9,6 +9,7 @@ import Footer from '../components/footer/footer'
 import Events from "../components/events/Events"
 import Carousel from '../components/carousel/carousel'
 import Activities from '../components/activities/Activities'
+import Achievement from "../components/Achievements/Achieve"
 
 export default function Homepage() {
   return (
@@ -20,6 +21,7 @@ export default function Homepage() {
       <Activities/>
       <Stats/>
       <Events/>
+      <Achievement/>
       <Carousel/>
       <WinnerSection/>
       <Footer/>
